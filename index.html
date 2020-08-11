@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--
+
+Created by eLemeLkya#9999
+All rights reserved
+ За убирание копирайта я имею права вас засудить
+ -->
+
+ <!DOCTYPE html>
+ <html>
+ <head>
+ <meta name="viewport" content="width=device-width initial-scale=1 maximum-scale=1 user-scalable=no">
+ <meta property="og:description" content="Многофункциональный дискорд бот, который имеет большое количество полезых комманд для вашего уютного сервера." />
+ <meta name="msapplication-TileColor" content="#070a0c" />
+ <meta name="theme-color" content="#070a0c" />
+ <link href="https://fonts.googleapis.com/css?family=Montserrat:100,400,700&subset=cyrillic" rel="stylesheet">
+ <link rel="stylesheet" href="style.css" type="text/css" charset="utf-8">
+ <title>Innu - Home</title>
+ <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<script>(function () {var embed = true;var playbackSet;var quality = 'hd1440'; onYouTubePlayerReady = function (player) {
+    function onPopupChange(e) {
+        quality = e.detail;
+        updateQuality();
+    };
+    document.addEventListener('updateQ', onPopupChange);
+    playbackSet = false;
+    extPlayer = player;
+    extPlayer.addEventListener("onStateChange", function (newState) {
+        if (newState == 3 && !playbackSet) {
+            updateQuality();
+        }
+        if (newState == -1) {
+            playbackSet = false;
+        }
+        if (newState == 5) {
+            embed = true;
+        }
+    });
+
+    extPlayer.addEventListener("onPlaybackQualityChange", function (event) {
+        if (embed) {
+            if (extPlayer.getAvailableQualityLevels === null) {
+                document.removeEventListener("updateQ", onPopupChange);
+                extPlayer = document.getElementById('movie_player');
+            }
+            var avaliableQuality = extPlayer.getAvailableQualityLevels();
+            var tq = (avaliableQuality.indexOf(quality) == -1) ? avaliableQuality[0] : quality;
+            var qualIsCorrect = (tq === extPlayer.getPlaybackQuality());
+            if (!qualIsCorrect) {
+                updateQuality();
+            }
+            embed = false;
+        }
+    });
+    updateQuality();
+}; function updateQuality() {
+    var avaliableQuality = extPlayer.getAvailableQualityLevels();
+    var q = (avaliableQuality.length && avaliableQuality.indexOf(quality) == -1) ? avaliableQuality[0] : quality;
+    var playerState = extPlayer.getPlayerState();
+    playbackSet = true;
+    var now = new Date().getTime();
+    var saved_q = {
+        creation: now,
+        data: q,
+        expiration: now + 2592000000 // one month
+    };
+    localStorage['yt-player-quality'] = JSON.stringify(saved_q);
+    extPlayer.setPlaybackQuality(q);
+};})()</script></head>
+<body>
+<header>
+<div id="side" class="appear-left"></div>
+<div id="intro" class="appear-down">
+<h1>Innuendo</h1>
+<p>Многофункциональный дискорд бот, который имеет большое количество полезных команд для вашего уютного сервера. С этим ботом, вы сможете позабыть про всех остальных ботов и положиться на него, ведь у него есть весь нужный вам функционал.</p>
+<span style="position: absolute; margin-top: 3vmin;">
+<a href="https://discord.com/api/oauth2/authorize?client_id=724699992199004281&permissions=8&scope=bot" class="button-special">Пригласить</a>
+<a href="https://discord.gg/zwnHWEC" class="button">Помощь</a>
+</span>
+</div>
+</header>
+
+<div id="uvpn_rate_us" style="display: none;">            <div class="uvpn_wrap">                <div class="uvpn_logo-ext">                    <div class="uvpn_logo-wrap">                        <img src="chrome-extension://jaoafpkngncfpfggjefnekilbkcpjdgp/img/128.png">                    </div>                </div>                <div class="uvpn_title">                    Don’t Forget to Rate Us                </div>                <div class="uvpn_desc">                    If you enjoy our product, give us 5 stars. It helps so much!                </div>                <div class="stars">                    <svg xmlns="http://www.w3.org/2000/svg" width="1235" height="1175" viewBox="0 0 1235 1175">                        <path fill="#cf6218" d="M0,449h1235l-999,726 382-1175 382,1175z"></path>                    </svg>                    <svg xmlns="http://www.w3.org/2000/svg" width="1235" height="1175" viewBox="0 0 1235 1175">                        <path fill="#cf6218" d="M0,449h1235l-999,726 382-1175 382,1175z"></path>                    </svg>                    <svg xmlns="http://www.w3.org/2000/svg" width="1235" height="1175" viewBox="0 0 1235 1175">                        <path fill="#cf6218" d="M0,449h1235l-999,726 382-1175 382,1175z"></path>                    </svg>                    <svg xmlns="http://www.w3.org/2000/svg" width="1235" height="1175" viewBox="0 0 1235 1175">                        <path fill="#cf6218" d="M0,449h1235l-999,726 382-1175 382,1175z"></path>                    </svg>                    <svg xmlns="http://www.w3.org/2000/svg" width="1235" height="1175" viewBox="0 0 1235 1175">                        <path fill="#cf6218" d="M0,449h1235l-999,726 382-1175 382,1175z"></path>                    </svg>                </div>                <a target="_blank" href="https://chrome.google.com/webstore/detail/uvpn-free-and-unlimited-v/jaoafpkngncfpfggjefnekilbkcpjdgp/reviews" id="rate_btn_rateus" class="uvpn_rate-btn uvpn_btn">                    Rate Us                </a>                <div id="close_btn_rateus" class="uvpn_later-btn uvpn_btn">                    Not Now                </div>            </div>        </div></body></html>
+
+<!--
+
+Created by eLemeLkya#9999
+All rights reserved
+ За убирание копирайта я имею права вас засудить
+ -->
